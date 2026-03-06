@@ -507,7 +507,22 @@ section[id] { scroll-margin-top:84px; }
 .ei-navy { background:var(--navy-lt); }
 .ei-rose { background:var(--rose-lt); }
 
-.exp-item-title { font-size:.88rem; font-weight:600; color:var(--ink); margin-bottom:8px; }
+.exp-item-title {
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-size:.88rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:8px;
+}
+.exp-item-title::before {
+  content:'\2022';
+  color:var(--teal);
+  font-size:1rem;
+  line-height:1.1;
+  flex-shrink:0;
+}
 .exp-item-desc { font-size:.82rem; color:var(--ink3); line-height:1.65; }
 
 .exp-metric {
