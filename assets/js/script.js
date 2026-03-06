@@ -32,6 +32,7 @@ const closeMenu = () => {
   document.body.classList.remove('menu-open');
   navToggle?.setAttribute('aria-expanded', 'false');
   mobileMenu?.setAttribute('aria-hidden', 'true');
+  if (mobileMenu) mobileMenu.hidden = true;
   if (mobileBackdrop) mobileBackdrop.hidden = true;
 };
 
@@ -39,10 +40,13 @@ const openMenu = () => {
   document.body.classList.add('menu-open');
   navToggle?.setAttribute('aria-expanded', 'true');
   mobileMenu?.setAttribute('aria-hidden', 'false');
+  if (mobileMenu) mobileMenu.hidden = false;
   if (mobileBackdrop) mobileBackdrop.hidden = false;
 };
 
 if (navToggle && mobileMenu && mobileBackdrop) {
+  closeMenu();
+
   navToggle.addEventListener('click', () => {
     const isOpen = document.body.classList.contains('menu-open');
     if (isOpen) {

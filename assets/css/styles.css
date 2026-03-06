@@ -118,6 +118,8 @@ nav.scrolled { box-shadow:var(--shadow-sm); }
 
 .mobile-menu-backdrop,
 .mobile-menu { display:none; }
+.mobile-menu[hidden],
+.mobile-menu-backdrop[hidden] { display:none !important; }
 
 .mobile-menu-backdrop {
   position:fixed;
