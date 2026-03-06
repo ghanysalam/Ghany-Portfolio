@@ -361,18 +361,6 @@ section { padding:100px 64px; }
   display:flex; align-items:center; justify-content:center;
   font-size:1.5rem; margin-bottom:18px;
 }
-.ea-logo.has-image {
-  background:var(--white);
-  border:1px solid var(--cream3);
-  padding:5px;
-  overflow:hidden;
-}
-.ea-logo-img {
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-}
 .ea-company { font-family:'DM Serif Display', serif; font-size:1.1rem; margin-bottom:4px; }
 .ea-role { font-size:.8rem; color:var(--teal); font-weight:600; margin-bottom:6px; }
 .ea-period { font-size:.72rem; color:var(--ink4); letter-spacing:.05em; margin-bottom:18px; }
