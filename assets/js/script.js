@@ -1,22 +1,77 @@
-// ── Scroll reveal
+// Scroll reveal
 const revealEls = document.querySelectorAll('.reveal, .proj-card');
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting) { e.target.classList.add('visible'); }
-  });
-}, { threshold: 0.08 });
+const io = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.08 }
+);
 revealEls.forEach(el => io.observe(el));
 
-// ── Nav scroll
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
-}, {passive:true});
+// Nav scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener(
+  'scroll',
+  () => {
+    navbar?.classList.toggle('scrolled', window.scrollY > 40);
+  },
+  { passive: true }
+);
 
-// ── Filter logic — HIDE cards not in category (not just fade)
+// Mobile nav menu
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileBackdrop = document.getElementById('mobileMenuBackdrop');
+const mobileMenuLinks = document.querySelectorAll('.mobile-links a, .mobile-cta');
+
+const closeMenu = () => {
+  document.body.classList.remove('menu-open');
+  navToggle?.setAttribute('aria-expanded', 'false');
+  mobileMenu?.setAttribute('aria-hidden', 'true');
+  if (mobileBackdrop) mobileBackdrop.hidden = true;
+};
+
+const openMenu = () => {
+  document.body.classList.add('menu-open');
+  navToggle?.setAttribute('aria-expanded', 'true');
+  mobileMenu?.setAttribute('aria-hidden', 'false');
+  if (mobileBackdrop) mobileBackdrop.hidden = false;
+};
+
+if (navToggle && mobileMenu && mobileBackdrop) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = document.body.classList.contains('menu-open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  mobileBackdrop.addEventListener('click', closeMenu);
+  mobileMenuLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener(
+    'resize',
+    () => {
+      if (window.innerWidth > 1024) closeMenu();
+    },
+    { passive: true }
+  );
+}
+
+// Filter logic: hide cards not in category
 const tabs = document.querySelectorAll('.ftab');
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    // Update active tab
     tabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
 
@@ -27,8 +82,7 @@ tabs.forEach(tab => {
       const match = filter === 'all' || card.dataset.cat === filter;
       if (match) {
         card.classList.remove('filtered-out');
-        // Stagger re-entrance
-        card.style.transitionDelay = (i * 0.06) + 's';
+        card.style.transitionDelay = `${i * 0.06}s`;
       } else {
         card.classList.add('filtered-out');
         card.style.transitionDelay = '0s';
