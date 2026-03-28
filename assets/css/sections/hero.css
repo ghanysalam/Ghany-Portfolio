@@ -4,7 +4,7 @@
 .hero {
   min-height:100vh;
   padding:110px 64px 80px;
-  display:flex; align-items:center;
+  display:flex; align-items:center; justify-content:center;
   position:relative; overflow:hidden;
 }
 
@@ -99,7 +99,7 @@
 .hb-pill::before { content:''; width:6px; height:6px; border-radius:50%; background:currentColor; }
 
 /* Text side */
-.hero-text-col {}
+/* Text side */
 
 .eyebrow {
   display:inline-flex; align-items:center; gap:10px;

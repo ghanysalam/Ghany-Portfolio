@@ -1,6 +1,14 @@
 /* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
+@media(min-width:1440px){
+  .section-inner { max-width: 1280px; }
+  .hero-inner { max-width: 1380px; gap: 100px; }
+  .hero-bio { font-size: 1.1rem; max-width: 540px; }
+  .photo-frame { width: 380px; height: 440px; }
+  .photo-frame::after { width: 75px; height: 75px; right: -25px; bottom: -25px; }
+}
+
 @media(max-width:1024px){
   nav{padding:0 24px;}
   .nav-links, .nav-cta{display:none;}
