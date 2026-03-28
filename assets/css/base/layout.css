@@ -1,0 +1,21 @@
+/* ══════════════════════════════════════
+   SECTION BASE
+══════════════════════════════════════ */
+section { padding:100px 64px; }
+section[id] { scroll-margin-top:84px; }
+.section-inner { max-width:1100px; margin:0 auto; }
+
+.sec-eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:.68rem; font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--teal); margin-bottom:12px;
+}
+.sec-eyebrow::before { content:''; width:20px; height:1.5px; background:var(--teal); }
+
+.sec-title {
+  font-family:'DM Serif Display', serif;
+  font-size:clamp(1.8rem, 3vw, 2.6rem);
+  line-height:1.12; letter-spacing:-.015em;
+  color:var(--ink); margin-bottom:48px;
+}

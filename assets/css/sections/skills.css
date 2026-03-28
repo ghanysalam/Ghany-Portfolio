@@ -1,0 +1,33 @@
+/* ══════════════════════════════════════
+   4. SKILLS & ABILITIES
+══════════════════════════════════════ */
+#skills { background:var(--white); border-top:1px solid var(--cream3); }
+
+.skills-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; }
+
+.skill-card {
+  background:var(--cream);
+  border:1.5px solid var(--cream3);
+  border-radius:var(--radius); padding:26px;
+  transition:transform .25s, box-shadow .25s, border-color .25s;
+}
+.skill-card:hover {
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--teal-mid);
+}
+.sc-icon { font-size:1.6rem; margin-bottom:14px; display:block; }
+.sc-title {
+  font-family:'DM Serif Display', serif;
+  font-size:1rem; color:var(--ink); margin-bottom:10px;
+}
+.sc-tags { display:flex; flex-wrap:wrap; gap:7px; }
+.sc-tag {
+  padding:4px 11px; border-radius:6px;
+  font-size:.68rem; font-weight:500;
+}
+.st-teal   { background:var(--teal-lt);  color:var(--teal); }
+.st-navy   { background:var(--navy-lt);  color:var(--navy); }
+.st-gold   { background:var(--gold-lt);  color:var(--gold); }
+.st-rose   { background:var(--rose-lt);  color:var(--rose); }
+.st-ink    { background:var(--cream3);   color:var(--ink2); }

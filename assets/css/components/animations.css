@@ -1,0 +1,24 @@
+/* ══════════════════════════════════════
+   REVEAL ANIMATIONS
+══════════════════════════════════════ */
+.reveal {
+  opacity:0; transform:translateY(22px);
+  transition:opacity .7s cubic-bezier(.25,.46,.45,.94),
+              transform .7s cubic-bezier(.25,.46,.45,.94);
+}
+.reveal.visible { opacity:1; transform:none; }
+.d1{transition-delay:.08s} .d2{transition-delay:.16s}
+.d3{transition-delay:.24s} .d4{transition-delay:.32s}
+.d5{transition-delay:.40s} .d6{transition-delay:.48s}
+
+/* Hero animations */
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:none;}
+}
+.hero-text-col .eyebrow { animation:fadeUp .7s .15s both; }
+.hero-text-col h1       { animation:fadeUp .7s .28s both; }
+.hero-text-col .hero-bio{ animation:fadeUp .7s .40s both; }
+.hero-text-col .hero-stats{ animation:fadeUp .7s .50s both; }
+.hero-text-col .hero-btns{ animation:fadeUp .7s .60s both; }
+.hero-photo-col         { animation:fadeUp .8s .25s both; }

@@ -1,0 +1,60 @@
+/* ══════════════════════════════════════
+   7. CONTACT
+══════════════════════════════════════ */
+#contact { background:var(--ink); border-top:1px solid rgba(255,255,255,.06); }
+
+#contact .sec-eyebrow { color:#64cfb8; }
+#contact .sec-eyebrow::before { background:#64cfb8; }
+#contact .sec-title { color:var(--white); }
+
+.contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+
+.contact-text p {
+  font-size:.98rem; color:rgba(255,255,255,.65);
+  line-height:1.8; margin-bottom:32px;
+}
+.contact-text strong { color:var(--white); }
+
+.avail-pill {
+  display:inline-flex; align-items:center; gap:10px;
+  padding:11px 20px;
+  background:rgba(100,207,184,.1);
+  border:1px solid rgba(100,207,184,.25);
+  border-radius:100px;
+  font-size:.76rem; font-weight:600;
+  letter-spacing:.06em; text-transform:uppercase;
+  color:#64cfb8;
+}
+.avail-dot {
+  width:7px; height:7px; border-radius:50%;
+  background:#64cfb8;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.8);} }
+
+.contact-cards { display:flex; flex-direction:column; gap:14px; }
+
+.c-card {
+  display:flex; align-items:center; gap:18px;
+  padding:20px 24px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:var(--radius);
+  text-decoration:none; color:var(--white);
+  transition:all .25s;
+}
+.c-card:hover {
+  background:rgba(255,255,255,.09);
+  border-color:rgba(100,207,184,.3);
+  transform:translateX(6px);
+}
+.c-icon {
+  width:44px; height:44px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.ci-li   { background:rgba(10,102,194,.25); }
+.ci-mail { background:rgba(100,207,184,.15); }
+.ci-gh   { background:rgba(255,255,255,.08); }
+.c-label { font-size:.65rem; color:rgba(255,255,255,.45); letter-spacing:.08em; text-transform:uppercase; }
+.c-val   { font-size:.88rem; font-weight:500; color:var(--white); margin-top:2px; }

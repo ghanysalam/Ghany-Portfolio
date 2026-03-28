@@ -1,0 +1,27 @@
+/* ══════════════════════════════════════
+   DESIGN SYSTEM  —  Warm Light Editorial
+══════════════════════════════════════ */
+:root {
+  --cream:    #faf8f4;
+  --cream2:   #f4f1eb;
+  --cream3:   #ede9e1;
+  --white:    #ffffff;
+  --ink:      #1a1714;
+  --ink2:     #3d3830;
+  --ink3:     #7a7268;
+  --ink4:     #b0a898;
+  --teal:     #1a7f6e;
+  --teal-lt:  #e8f5f2;
+  --teal-mid: #c2e8e2;
+  --navy:     #1e3a5f;
+  --navy-lt:  #e8eef5;
+  --gold:     #c8860a;
+  --gold-lt:  #fef3dc;
+  --rose:     #c04c3b;
+  --rose-lt:  #fdecea;
+  --shadow-sm: 0 2px 12px rgba(26,23,20,.07);
+  --shadow-md: 0 8px 32px rgba(26,23,20,.10);
+  --shadow-lg: 0 24px 64px rgba(26,23,20,.13);
+  --radius:   14px;
+  --radius-sm: 8px;
+}
