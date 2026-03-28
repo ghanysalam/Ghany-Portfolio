@@ -1,19 +1,19 @@
 /* Main Stylesheet */
-@import url('base/variables.css');
-@import url('base/reset.css');
-@import url('base/layout.css');
+@import url('base/variables.css?v=2');
+@import url('base/reset.css?v=2');
+@import url('base/layout.css?v=2');
 
-@import url('components/nav.css');
-@import url('components/animations.css');
-@import url('components/utils.css');
+@import url('components/nav.css?v=2');
+@import url('components/animations.css?v=2');
+@import url('components/utils.css?v=2');
 
-@import url('sections/hero.css');
-@import url('sections/education.css');
-@import url('sections/experience.css');
-@import url('sections/skills.css');
-/* @import url('sections/certifications.css'); */
-@import url('sections/projects.css');
-@import url('sections/contact.css');
-@import url('sections/footer.css');
+@import url('sections/hero.css?v=2');
+@import url('sections/education.css?v=2');
+@import url('sections/experience.css?v=2');
+@import url('sections/skills.css?v=2');
+/* @import url('sections/certifications.css?v=2'); */
+@import url('sections/projects.css?v=2');
+@import url('sections/contact.css?v=2');
+@import url('sections/footer.css?v=2');
 
-@import url('base/responsive.css');
+@import url('base/responsive.css?v=2');

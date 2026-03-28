@@ -32,8 +32,8 @@
 
 .hero-inner {
   display:grid; grid-template-columns:1fr 1fr;
-  gap:80px; align-items:center;
-  width:100%; max-width:1180px; position:relative; z-index:2;
+  gap:80px; align-items:center; justify-content:center;
+  width:100%; max-width:1180px; margin:0 auto; position:relative; z-index:2;
 }
 
 /* Photo side */
