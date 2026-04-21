@@ -1,26 +1,14 @@
 const educationData = [
   {
-    icon: "🎓",
-    year: "2018 – 2022",
-    degree: "Bachelor of Information Systems",
-    institution: "UPN Veteran Jakarta",
-    detail: "Focused on data analytics and statistical methods. Coursework in Predictive Analytics, Business Intelligence, Statistics & Probability, and Database Systems.",
+    icon: "⚙️",
+    year: "Feb 2026 – Apr 2026",
+    degree: "Data Engineering Zoomcamp",
+    institution: "DataTalks.Club",
+    detail: "End-to-end data pipelines, modern data stack (GCP, Terraform, Docker, dbt, Kestra), Star Schema data modeling, and batch processing.",
     badges: [
-      { text: "GPA 3.76 / 4.00", class: "eb-gold" },
-      { text: "Cum Laude", class: "eb-teal", style: "margin-left:6px" }
+      { text: "Completed", class: "eb-navy" }
     ],
     animationClass: "d1"
-  },
-  {
-    icon: "📊",
-    year: "Jul 2023 – Jan 2024",
-    degree: "Data Science & Machine Learning Bootcamp",
-    institution: "Purwadhika Digital Technology School",
-    detail: "Intensive hands-on program covering Data Science and Machine Learning, statistical modeling, SQL, Python, and business-case project delivery.",
-    badges: [
-      { text: "Score: 82.97 / 100", class: "eb-teal" }
-    ],
-    animationClass: "d2"
   },
   {
     icon: "🤖",
@@ -31,16 +19,28 @@ const educationData = [
     badges: [
       { text: "Completed", class: "eb-navy" }
     ],
+    animationClass: "d2"
+  },
+  {
+    icon: "📊",
+    year: "Jul 2023 – Jan 2024",
+    degree: "Data Science & Machine Learning Bootcamp",
+    institution: "Purwadhika Digital Technology School",
+    detail: "Intensive hands-on program covering Data Science and Machine Learning, statistical modeling, SQL, Python, and business-case project delivery.",
+    badges: [
+      { text: "Score: 82.97 / 100", class: "eb-teal" }
+    ],
     animationClass: "d3"
   },
   {
-    icon: "⚙️",
-    year: "Feb 2026 – Present",
-    degree: "Data Engineering Zoomcamp",
-    institution: "DataTalks.Club",
-    detail: "End-to-end data pipelines, modern data stack (GCP, Terraform, Docker, dbt, Kestra), Star Schema data modeling, and batch processing.",
+    icon: "🎓",
+    year: "2018 – 2022",
+    degree: "Bachelor of Information Systems",
+    institution: "UPN Veteran Jakarta",
+    detail: "Focused on data analytics and statistical methods. Coursework in Predictive Analytics, Business Intelligence, Statistics & Probability, and Database Systems.",
     badges: [
-      { text: "Completed", class: "eb-navy" }
+      { text: "GPA 3.76 / 4.00", class: "eb-gold" },
+      { text: "Cum Laude", class: "eb-teal", style: "margin-left:6px" }
     ],
     animationClass: "d4"
   }
