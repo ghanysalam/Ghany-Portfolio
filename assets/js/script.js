@@ -46,7 +46,7 @@ const renderProjects = () => {
   const container = document.getElementById('projGrid');
   if (!container || typeof projectsData === 'undefined') return;
   container.innerHTML = projectsData.map(item => `
-    <div class="proj-card" data-cat="${item.category}">
+    <div class="proj-card" data-cat="${Array.isArray(item.category) ? item.category.join(' ') : item.category}">
       <img class="proj-img" src="${item.image}" alt="${item.alt}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
       <div class="proj-body">
         <div class="proj-tags">
@@ -167,7 +167,7 @@ tabs.forEach(tab => {
     const cards = document.querySelectorAll('.proj-card');
 
     cards.forEach((card, i) => {
-      const match = filter === 'all' || card.dataset.cat === filter;
+      const match = filter === 'all' || card.dataset.cat.split(' ').includes(filter);
       if (match) {
         card.classList.remove('filtered-out');
         card.style.transitionDelay = `${i * 0.06}s`;

@@ -2,7 +2,7 @@ const educationData = [
   {
     icon: "🎓",
     year: "2018 – 2022",
-    degree: "Bachelor of Computer Science — Information Systems",
+    degree: "Bachelor of Information Systems",
     institution: "UPN Veteran Jakarta",
     detail: "Focused on data analytics and statistical methods. Coursework in Predictive Analytics, Business Intelligence, Statistics & Probability, and Database Systems.",
     badges: [
@@ -40,7 +40,7 @@ const educationData = [
     institution: "DataTalks.Club",
     detail: "End-to-end data pipelines, modern data stack (GCP, Terraform, Docker, dbt, Kestra), Star Schema data modeling, and batch processing.",
     badges: [
-      { text: "In Progress", class: "eb-teal" }
+      { text: "Completed", class: "eb-navy" }
     ],
     animationClass: "d4"
   }
@@ -92,9 +92,14 @@ const skillsData = [
     tags: [
       { name: "dbt", class: "st-teal" },
       { name: "BigQuery", class: "st-teal" },
+      { name: "Snowflake", class: "st-teal" },
+      { name: "Apache Airflow", class: "st-teal" },
+      { name: "Apache Flink", class: "st-teal" },
       { name: "Python", class: "st-teal" },
       { name: "Pandas", class: "st-teal" },
       { name: "SQL (PostgreSQL)", class: "st-ink" },
+      { name: "Debezium (CDC)", class: "st-ink" },
+      { name: "MinIO (S3)", class: "st-ink" },
       { name: "Star Schema", class: "st-ink" },
       { name: "ELT Processes", class: "st-ink" },
       { name: "PySpark", class: "st-ink" }
@@ -121,7 +126,8 @@ const skillsData = [
       { name: "TensorFlow/Keras", class: "st-rose" },
       { name: "PyTorch", class: "st-rose" },
       { name: "CNN", class: "st-rose" },
-      { name: "Vision Transformer", class: "st-rose" },
+      { name: "Vision Transformer (ViT)", class: "st-rose" },
+      { name: "Hybrid CNN–ViT", class: "st-rose" },
       { name: "Transfer Learning", class: "st-ink" },
       { name: "LLMs", class: "st-ink" },
       { name: "LangChain", class: "st-ink" }
@@ -157,11 +163,14 @@ const skillsData = [
     icon: "☁️",
     title: "Cloud & Data Infrastructure",
     tags: [
-      { name: "Google Cloud (GCS)", class: "st-navy" },
+      { name: "GCP (Google Cloud)", class: "st-navy" },
+      { name: "Snowflake", class: "st-navy" },
       { name: "BigQuery", class: "st-navy" },
       { name: "Terraform", class: "st-navy" },
       { name: "Docker", class: "st-ink" },
+      { name: "MinIO", class: "st-ink" },
       { name: "Kestra", class: "st-ink" },
+      { name: "GitHub Actions (CI/CD)", class: "st-ink" },
       { name: "Git", class: "st-ink" }
     ],
     animationClass: "d6"
@@ -169,6 +178,20 @@ const skillsData = [
 ];
 
 const projectsData = [
+  {
+    category: ["data-engineering", "analytics"],
+    image: "assets/images/projects/banking-modern-data-stack.png",
+    alt: "Banking Modern Data Stack architecture",
+    tags: [
+      { name: "Data Engineering", class: "pt-navy" },
+      { name: "Streaming", class: "pt-teal" },
+      { name: "Snowflake", class: "pt-gold" }
+    ],
+    title: "Banking Modern Data Stack",
+    desc: "End-to-end modern data stack for the banking domain — CDC streaming from PostgreSQL via Kafka + Debezium into MinIO, orchestrated by Airflow, transformed in dbt (Star Schema + SCD Type-2), landed in Snowflake, and delivered through a Banking KPI dashboard. CI/CD enforced via GitHub Actions.",
+    impact: "CDC Streaming · SCD Type-2 · Star Schema · Banking KPI Dashboard · CI/CD via GitHub Actions",
+    link: "https://github.com/ghanysalam/banking-data-engineering"
+  },
   {
     category: "data-engineering",
     image: "assets/images/projects/nyc-taxi-pipeline.png",
