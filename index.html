@@ -272,8 +272,17 @@
   <!-- ════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════ -->
-  <script src="assets/js/data.js?v=20260507-1" defer></script>
-  <script src="assets/js/script.js?v=20260507-1" defer></script>
+  <script>
+    // Automated cache-busting: append current timestamp to force latest version
+    const version = Date.now();
+    const scripts = ['assets/js/data.js', 'assets/js/script.js'];
+    scripts.forEach(src => {
+      const s = document.createElement('script');
+      s.src = `${src}?v=${version}`;
+      s.async = false; // Ensure scripts execute in the exact order (data.js first, then script.js)
+      document.body.appendChild(s);
+    });
+  </script>
 
 </body>
 
