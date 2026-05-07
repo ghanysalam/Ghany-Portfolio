@@ -180,6 +180,20 @@ const skillsData = [
 const projectsData = [
   {
     category: ["data-engineering", "analytics"],
+    image: "assets/images/projects/Flight-Ops-Analytics.png",
+    alt: "Flights Operations Airflow Pipeline architecture",
+    tags: [
+      { name: "Data Engineering", class: "pt-navy" },
+      { name: "Airflow", class: "pt-teal" },
+      { name: "Snowflake", class: "pt-gold" }
+    ],
+    title: "Flights Operations Airflow Pipeline",
+    desc: "End-to-end batch data pipeline orchestrating live flight state extraction from the OpenSky Network API. Features containerized Airflow/Docker infrastructure for automated transformation and loading into Snowflake Gold-layer tables, delivered through an interactive Streamlit analytics dashboard.",
+    impact: "Batch ETL · API Integration · Snowflake Gold Layer · Global Flight KPIs · Streamlit Analytics",
+    link: "https://github.com/ghanysalam/flights-ops-airflow"
+  },
+  {
+    category: ["data-engineering", "analytics"],
     image: "assets/images/projects/banking-modern-data-stack.png",
     alt: "Banking Modern Data Stack architecture",
     tags: [
