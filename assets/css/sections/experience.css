@@ -4,6 +4,7 @@
 #experience { background:var(--cream); border-top:1px solid var(--cream3); }
 
 .exp-layout { display:grid; grid-template-columns:280px 1fr; gap:60px; align-items:start; }
+.exp-layout + .exp-layout { margin-top:72px; padding-top:72px; border-top:1px solid var(--cream3); }
 
 .exp-aside {
   position:sticky; top:90px;
@@ -20,6 +21,7 @@
   display:flex; align-items:center; justify-content:center;
   font-size:1.5rem; margin-bottom:18px;
 }
+.ea-logo.ea-xiaomi { background:linear-gradient(135deg, #ff6900, #ff8a3d); }
 .ea-company { font-family:'DM Serif Display', serif; font-size:1.1rem; margin-bottom:4px; }
 .ea-role { font-size:.8rem; color:var(--teal); font-weight:600; margin-bottom:6px; }
 .ea-period { font-size:.72rem; color:var(--ink4); letter-spacing:.05em; margin-bottom:18px; }

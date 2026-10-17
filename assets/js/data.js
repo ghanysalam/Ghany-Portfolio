@@ -48,40 +48,98 @@ const educationData = [
 
 const experienceData = [
   {
-    title: "Credit Insurance Analytics — Unsecured & Secured Loans",
-    desc: "Gathered, cleaned, and analyzed data across the full credit insurance lifecycle, collaborating with credit and risk divisions to surface risk patterns that enhanced the health of the loan portfolio.",
-    metric: null,
-    animationClass: "d2"
+    company: "Xiaomi Indonesia",
+    logo: "📱",
+    logoClass: "ea-xiaomi",
+    role: "Pricing & Scheme Analyst",
+    period: "May 2026 – Present",
+    location: "Jakarta, Indonesia",
+    intro: "At Xiaomi Indonesia, I analyze <strong>pricing, margin, and promotional scheme performance</strong> across the smartphone and tablet portfolio, and build the <strong>Spark SQL and Hive data pipelines</strong> that keep the commercial team's pricing and scheme reporting current.",
+    items: [
+      {
+        title: "Revenue Decline Diagnosis — Pricing & Margin Breakdown",
+        desc: "Broke down pricing and margin across the smartphone portfolio to pinpoint the product models driving a revenue decline, giving the commercial team a model-level view of where to act.",
+        metric: "↓ 7% revenue decline traced to product-model level",
+        animationClass: "d2"
+      },
+      {
+        title: "Offline Margin & Sell-Out Refund Model",
+        desc: "Built a margin model for offline phone and tablet variants that quantifies distributor and retailer margins and sell-out refund (credit note) exposure across the pricelist.",
+        metric: "↑ 45 offline variants modeled",
+        animationClass: "d3"
+      },
+      {
+        title: "Promotional Scheme Effectiveness — 4 Sales Channels",
+        desc: "Tracked scheme performance month over month across Traditional, Key Account, Authorized Store, and Online channels, flagging underperforming programs for redesign.",
+        metric: "↑ 19% average MoM decline flagged for redesign",
+        animationClass: "d4"
+      },
+      {
+        title: "Sell-Out Forecasting for Scheme Budgets",
+        desc: "Forecast monthly sell-out per model from historical sales to size promotional scheme budgets and pricing plans.",
+        metric: null,
+        animationClass: "d5"
+      },
+      {
+        title: "Scheme Budget Pipeline — Feishu Sheets to Apache Hive",
+        desc: "Built an ETL pipeline in Spark SQL joining smartphone and tablet pricing with 4-channel sell-out data, then modeled aggregation tables comparing forecasted scheme budget with partner-claimable budget and published them to Feishu reporting.",
+        metric: "↑ Recurring forecast vs. claimable budget view for the commercial team",
+        animationClass: "d6"
+      },
+      {
+        title: "dim_smartphone_price — Daily SRP Snapshot Table",
+        desc: "Develop and maintain a daily offline and online SRP snapshot table per product, using Spark SQL on DataWorks with a scheduled daily job and a full 2026 historical backfill from Feishu-synced source tables.",
+        metric: "↑ Daily scheduled job · full 2026 backfill",
+        animationClass: "d7"
+      }
+    ]
   },
   {
-    title: "Credit Default Risk — Mortality Classification Model",
-    desc: "Developed a Logistic Regression classification model to identify debtors at high risk of loan default caused by death, enabling proactive risk management and credit insurance coverage strategies.",
-    metric: null,
-    animationClass: "d3"
-  },
-  {
-    title: "Enterprise KPI Dashboard — 150+ Branch Network",
-    desc: "Engineered a Python data pipeline combining multiple sources, powering a Tableau dashboard tracking KPIs across 150+ branches.",
-    metric: "↑ Minus KPI: 17 branches → 1 branch (94% improvement in 3 months)",
-    animationClass: "d4"
-  },
-  {
-    title: "Partner Portfolio Optimization — Life Insurance Credit",
-    desc: "Evaluated and benchmarked health portfolios across all insurance partners to identify top-tier providers. Strategically selected partners based on data-driven health metrics to optimize bank procurement strategies.",
-    metric: "↑ 15% cost efficiency improvement",
-    animationClass: "d5"
-  },
-  {
-    title: "Debtor Health Analytics — Claims Reduction",
-    desc: "Analyzed debtor health risk profiles to generate actionable insights for the risk monitoring and credit divisions. Implemented systematic health portfolio analysis to identify patterns and mitigate potential losses.",
-    metric: "↑ 17% outstanding claims reduction",
-    animationClass: "d6"
-  },
-  {
-    title: "Reporting Automation — Excel to Python + Tableau Pipeline",
-    desc: "Transformed daily and weekly reporting from manual Excel workflows into a seamless Python and Tableau integration, eliminating hours of repetitive work.",
-    metric: "↑ 60% time efficiency improvement",
-    animationClass: "d7"
+    company: "Bank Woori Saudara",
+    logo: "🏦",
+    logoClass: "",
+    role: "Data Analyst",
+    period: "April 2024 – August 2025",
+    location: "Jakarta, Indonesia",
+    intro: "At Bank Woori Saudara, I worked at the intersection of <strong>data analysis and business intelligence</strong>, building automated systems that replaced manual workflows and empowering credit and risk divisions with data-driven tools to protect and grow the loan portfolio.",
+    items: [
+      {
+        title: "Credit Insurance Analytics — Unsecured & Secured Loans",
+        desc: "Gathered, cleaned, and analyzed data across the full credit insurance lifecycle, collaborating with credit and risk divisions to surface risk patterns that enhanced the health of the loan portfolio.",
+        metric: null,
+        animationClass: "d2"
+      },
+      {
+        title: "Credit Default Risk — Mortality Classification Model",
+        desc: "Developed a Logistic Regression classification model to identify debtors at high risk of mortality-related loan default, enabling proactive risk management and credit insurance coverage strategies.",
+        metric: null,
+        animationClass: "d3"
+      },
+      {
+        title: "Enterprise KPI Dashboard — 150+ Branch Network",
+        desc: "Engineered a Python data pipeline combining multiple sources, powering a Tableau dashboard tracking KPIs across 150+ branches.",
+        metric: "↑ Below-target branches: 17 → 1 (94% improvement in 3 months)",
+        animationClass: "d4"
+      },
+      {
+        title: "Partner Portfolio Optimization — Life Insurance Credit",
+        desc: "Evaluated and benchmarked health portfolios across all insurance partners to identify top-tier providers. Strategically selected partners based on data-driven health metrics to optimize bank procurement strategies.",
+        metric: "↑ 15% cost efficiency improvement",
+        animationClass: "d5"
+      },
+      {
+        title: "Debtor Health Analytics — Claims Reduction",
+        desc: "Analyzed debtor health risk profiles to generate actionable insights for the risk monitoring and credit divisions. Implemented systematic health portfolio analysis to identify patterns and mitigate potential losses.",
+        metric: "↑ 17% outstanding claims reduction",
+        animationClass: "d6"
+      },
+      {
+        title: "Reporting Automation — Excel to Python + Tableau Pipeline",
+        desc: "Transformed daily and weekly reporting from manual Excel workflows into a seamless Python and Tableau integration, eliminating hours of repetitive work.",
+        metric: "↑ 60% time efficiency improvement",
+        animationClass: "d7"
+      }
+    ]
   }
 ];
 
@@ -102,7 +160,10 @@ const skillsData = [
       { name: "MinIO (S3)", class: "st-ink" },
       { name: "Star Schema", class: "st-ink" },
       { name: "ELT Processes", class: "st-ink" },
-      { name: "PySpark", class: "st-ink" }
+      { name: "PySpark", class: "st-ink" },
+      { name: "Apache Hive", class: "st-ink" },
+      { name: "Spark SQL", class: "st-ink" },
+      { name: "DataWorks", class: "st-ink" }
     ],
     animationClass: "d1"
   },
@@ -153,6 +214,8 @@ const skillsData = [
     tags: [
       { name: "Tableau", class: "st-teal" },
       { name: "Power BI", class: "st-teal" },
+      { name: "Excel (Power Query)", class: "st-teal" },
+      { name: "Feishu/Lark Sheets", class: "st-ink" },
       { name: "Matplotlib", class: "st-ink" },
       { name: "Seaborn", class: "st-ink" },
       { name: "Executive Dashboards", class: "st-ink" }

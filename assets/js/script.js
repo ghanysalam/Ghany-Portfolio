@@ -15,14 +15,38 @@ const renderEducation = () => {
 };
 
 const renderExperience = () => {
-  const container = document.getElementById('expGrid');
+  const container = document.getElementById('expRoles');
   if (!container || typeof experienceData === 'undefined') return;
-  container.innerHTML = experienceData.map(item => `
-    <div class="exp-item reveal ${item.animationClass}">
-      <div>
-        <div class="exp-item-title">${item.title}</div>
-        <div class="exp-item-desc">${item.desc}</div>
-        ${item.metric ? `<span class="exp-metric em-teal">${item.metric}</span>` : ''}
+  container.innerHTML = experienceData.map(role => `
+    <div class="exp-layout">
+      <div class="exp-aside reveal d1">
+        <div class="exp-aside-card">
+          <div class="ea-logo ${role.logoClass || ''}">${role.logo}</div>
+          <div class="ea-company">${role.company}</div>
+          <div class="ea-role">${role.role}</div>
+          <div class="ea-period">${role.period}</div>
+          <div class="ea-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            ${role.location}
+          </div>
+        </div>
+      </div>
+      <div class="exp-main">
+        <p class="exp-intro reveal d2">${role.intro}</p>
+        <div class="exp-items">
+          ${role.items.map(item => `
+            <div class="exp-item reveal ${item.animationClass}">
+              <div>
+                <div class="exp-item-title">${item.title}</div>
+                <div class="exp-item-desc">${item.desc}</div>
+                ${item.metric ? `<span class="exp-metric em-teal">${item.metric}</span>` : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
       </div>
     </div>
   `).join('');
